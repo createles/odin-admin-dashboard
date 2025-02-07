@@ -1,6 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
@@ -80,6 +86,36 @@
 .forApproval {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    display: grid;
+    /* Enable vertical scrolling if items 
+    overflow container height */
+    overflow-y: auto;
+    grid-template-columns: repeat(2, 1fr);
+    /* Set row height to be 30% of container height */
+    grid-auto-rows: 30%;
+    gap: 15px;
+    /* Must set a fixed height to enable scrollbar
+    on overflowing content */
+    max-height: 80vh;
+    /* Set padding for cleaner card appearance */
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* Additional css styling for scrollbar */
+.forApproval::-webkit-scrollbar {
+    width: 8px;
+}
+
+.forApproval::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.card {
+    background-color: white;
 }
 
 .announce {
