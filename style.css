@@ -13,7 +13,7 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
 }
 
 .sidebar {
@@ -21,7 +21,8 @@ body {
     grid-column-end: 2;
     background-color: aquamarine;
     display: grid;
-    grid-template-rows: 1fr 3fr 5fr;
+    grid-template-rows: 1fr 3fr 5% 5fr;
+    font-size: clamp(16px, 1.5vw, 32px);
 }
 
 .dashlogo {
@@ -42,8 +43,8 @@ body {
 }
 
 .pages img {
-    width: 2.5em;
-    height: 2.5em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .main {
@@ -56,7 +57,6 @@ body {
 
 .header {
     grid-area: 1 / 1 / 2 / 2;
-    background-color: blue;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -70,12 +70,35 @@ body {
 .searchBar {
     grid-area: 1 / 1 / 2 / 2;
     justify-self: center;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchBar img {
+    width: 1.5rem;
+    height: auto;
+    align-self: center;
+}
+
+.searchBar input[type=search] {
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(230, 230, 230);
 }
 
 .topSide {
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     justify-content: space-around;
+}
+
+.topSide img {
+    width: 1.5rem;
 }
 
 .headBottom {
