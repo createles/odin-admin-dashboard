@@ -255,6 +255,7 @@ div.pages:nth-of-type(1) {
 .cardContent > p:nth-child(2) {
     color: grey;
     margin: 5px 0px;
+    font-size: 1vw;
 }
 
 .label {
